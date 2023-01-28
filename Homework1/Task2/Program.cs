@@ -5,6 +5,7 @@ Console.WriteLine("Введите два числа: ");
 int NumOne = int.Parse(Console.ReadLine());
 int NumTwo = int.Parse(Console.ReadLine());
 Console.Write("max = ");
+
 if (NumOne > NumTwo | NumOne == NumTwo)
 {
     Console.Write(NumOne);
