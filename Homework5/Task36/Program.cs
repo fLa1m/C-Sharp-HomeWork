@@ -30,7 +30,12 @@ void PrintArray(int[] array)
 
 int SumOfUnevenElements(int[] array)
 {
-
+    int sum = 0;
+    for (int i = 1; i < array.Length; i += 2)
+    {
+        sum += array[i];
+    }
+    return sum;
 }
 
 Console.Clear();
@@ -40,3 +45,4 @@ int max = DataEntry("Введите максимальное значение и
 int[] array = GenerateArray(length, min, max);
 Console.WriteLine("Исходный массив:");
 PrintArray(array);
+Console.WriteLine($"Сумма элементов на нечетных позициях = {SumOfUnevenElements(array)}");
