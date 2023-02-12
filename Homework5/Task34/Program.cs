@@ -8,12 +8,12 @@ int DataEntry(string message)
     return result;
 }
 
-int[] GenerateArray(int length)
+int[] GenerateArray(int length, int minValue, int maxValue)
 {
     int[] array = new int[length];
     for (int i = 0; i < length; i++)
     {
-        array[i] = new Random().Next(100, 1000);
+        array[i] = new Random().Next(minValue, maxValue + 1);
     }
     return array;
 }
@@ -43,7 +43,9 @@ int EvenNum(int[] array)
 
 Console.Clear();
 int length = DataEntry("Введите длину массива: ");
-int[] array = GenerateArray(length);
+int min = DataEntry("Введите минимальное значение интервала: ");
+int max = DataEntry("Введите максимальное значение интервала: ");
+int[] array = GenerateArray(length, min, max);
 Console.WriteLine("Исходный массив:");
 PrintArray(array);
 Console.WriteLine($"Количество четных чисел в массиве: {EvenNum(array)}");
