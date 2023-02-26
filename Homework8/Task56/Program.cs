@@ -42,7 +42,7 @@ void PrintArray(int[,] array)
 void SumOfRow(int[,] array)
 {
     int minSum = 0;
-    int rowSum = 0;
+    int rowSum = 0; // можно было инициализировать внутри цикла и тогда бы не пришлось обнулять
     int minRow = 0;
     for (int i = 0; i < array.GetLength(1); i++)
     {
